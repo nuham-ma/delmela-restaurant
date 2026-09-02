@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Delmela Restaurant & Café — Bole, Sarbet, and Summit, Addis Ababa. Artisanal bowls, sandwiches, waffles, smoothies, and cozy modern dining.">
+  <title>ዴልሜላ ሬስቶራንትና ካፌ | Delmela Restaurant Addis Ababa</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans, Playfair Display, Noto Sans Ethiopic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       Header & Navigation Bar
+       ========================================================================== -->
+  <header class="header">
+    <div class="container nav-wrapper">
+      <a href="#home" class="brand-logo" aria-label="Delmela Restaurant">
+        <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="20" fill="#D97706"/>
+          <path d="M12 21C12 16.5 15.5 13 20 13C24.5 13 28 16.5 28 21C28 25.5 24.5 27 20 27C15.5 27 12 25.5 12 21Z" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M16 21C16 19 18 17.5 20 17.5C22 17.5 24 19 24 21" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="20" cy="22" r="1.5" fill="#FFFFFF"/>
+        </svg>
+        <div>
+          <span class="brand-wordmark">Delmela</span>
+          <div class="brand-tagline-mini">Bole • Sarbet • Summit</div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link" data-i18n="nav_home">ዋና ገጽ</a></li>
+          <li><a href="#about" class="nav-link" data-i18n="nav_about">ስለ ዴልሜላ</a></li>
+          <li><a href="#menu" class="nav-link" data-i18n="nav_menu">ምግቦችና መጠጦች</a></li>
+          <li><a href="#gallery" class="nav-link" data-i18n="nav_gallery">የፎቶ ማህደር</a></li>
+          <li><a href="#location" class="nav-link" data-i18n="nav_location">አድራሻና ካርታ</a></li>
+          <li><a href="#contact" class="nav-link" data-i18n="nav_contact">ያግኙን</a></li>
+        </ul>
+      </nav>
+
+      <!-- Language Switcher & Actions -->
+      <div class="nav-actions">
+        <div class="lang-toggle" role="group" aria-label="Language Selector">
+          <button type="button" class="lang-btn lang-btn-am active" aria-label="Switch to Amharic">
+            <span>🇪🇹</span> አማርኛ
+          </button>
+          <button type="button" class="lang-btn lang-btn-en" aria-label="Switch to English">
+            <span>🇬🇧</span> EN
+          </button>
+        </div>
+
+        <a href="tel:+251980635959" class="btn btn-primary" aria-label="Call Delmela Restaurant">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.02l-2.21 2.19z"/></svg>
+          <span data-i18n="nav_call_cta">ይደውሉልን</span>
+        </a>
+
+        <!-- Mobile Toggle Button -->
+        <button type="button" class="menu-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-content">
+      <ul class="mobile-nav-links">
+        <li><a href="#home" class="mobile-nav-link" data-i18n="nav_home">ዋና ገጽ</a></li>
+        <li><a href="#about" class="mobile-nav-link" data-i18n="nav_about">ስለ ዴልሜላ</a></li>
+        <li><a href="#menu" class="mobile-nav-link" data-i18n="nav_menu">ምግቦችና መጠጦች</a></li>
+        <li><a href="#gallery" class="mobile-nav-link" data-i18n="nav_gallery">የፎቶ ማህደር</a></li>
+        <li><a href="#location" class="mobile-nav-link" data-i18n="nav_location">አድራሻና ካርታ</a></li>
+        <li><a href="#contact" class="mobile-nav-link" data-i18n="nav_contact">ያግኙን</a></li>
+      </ul>
+
+      <div class="mobile-drawer-actions">
+        <a href="tel:+251980635959" class="btn btn-primary" style="width: 100%;">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.02l-2.21 2.19z"/></svg>
+          <span data-i18n="nav_call_cta">ይደውሉልን</span>
+        </a>
+        <a href="https://www.facebook.com/share/1BjKPmk4Zw/" target="_blank" rel="noopener noreferrer" class="btn btn-facebook" style="width: 100%;">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <span data-i18n="hero_cta_facebook">ፌስቡክ ገጻችን</span>
+        </a>
+        <a href="https://www.instagram.com/_delmela/" target="_blank" rel="noopener noreferrer" class="btn btn-instagram" style="width: 100%;">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <span data-i18n="hero_cta_instagram">ኢንስታግራም @_delmela</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         Hero Section
+         ========================================================================== -->
+    <section id="home" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content reveal-fade">
+          <div class="section-badge">
+            <svg class="icon" style="width:14px;height:14px;" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+            <span data-i18n="hero_badge">ቦሌ • ሳርቤት • ሰሚት • አዲስ አበባ</span>
+          </div>
+          <h1 class="hero-title" data-i18n="hero_title">ጣዕምና ምቾት የተገናኙበት የከተማችን ድንቅ ማረፊያ</h1>
+          <p class="hero-desc" data-i18n="hero_desc">በአዲስ አበባ ቦሌ፣ ሳርቤትና ሰሚት ቅርንጫፎች የሚገኘው ዴልሜላ ሬስቶራንትና ካፌ፤ ትኩስና የተመረጡ ምግቦችን፣ ጤናማ ቦውሎችን፣ በእጅ የተዘጋጁ ሳንድዊቾችን፣ ልዩ ዋፍሎችንና ጣፋጭ መጠጦችን በምቹ ድባብ ያቀርባል።</p>
+          
+          <div class="hero-ctas">
+            <a href="#location" class="btn btn-primary">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+              <span data-i18n="hero_cta_location">አድራሻችንን ይመልከቱ</span>
+            </a>
+            <a href="#menu" class="btn btn-secondary">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M8.1 13.34l2.83-2.83L3.91 3.5a4.008 4.008 0 000 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L14.88 11.53z"/></svg>
+              <span data-i18n="hero_cta_menu">ምግቦችን ይመልከቱ</span>
+            </a>
+            <a href="https://www.facebook.com/share/1BjKPmk4Zw/" target="_blank" rel="noopener noreferrer" class="btn btn-facebook">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <span data-i18n="hero_cta_facebook">ፌስቡክ ገጻችን</span>
+            </a>
+            <a href="https://www.instagram.com/_delmela/" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              <span data-i18n="hero_cta_instagram">ኢንስታግራም @_delmela</span>
+            </a>
+          </div>
+
+          <div class="hero-badges-bar">
+            <div class="hero-pill-feature">
+              <span class="dot"></span>
+              <span data-i18n="hero_feature_dinein">በ 3ቱም ቅርንጫፎች በቦታው መመገብ</span>
+            </div>
+            <div class="hero-pill-feature">
+              <span class="dot"></span>
+              <span data-i18n="hero_feature_takeaway">ይዘው ለመሄድ (Takeaway)</span>
+            </div>
+            <div class="hero-pill-feature">
+              <span class="dot"></span>
+              <span data-i18n="hero_feature_delivery">በማድረስ አገልግሎት (Deliver Addis, Zmall, RIDE Food)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal-fade">
+          <div class="hero-image-frame" data-zoomable data-full-img="assets/images/branch-bole-terracotta-tree-hall.jpg">
+            <img src="assets/images/branch-bole-terracotta-tree-hall.webp" alt="Delmela Bole Branch Atmosphere" class="hero-main-img" fetchpriority="high" width="900" height="720">
+            <div class="hero-badge-tag">
+              <span>★</span> Delmela Dining
+            </div>
+          </div>
+
+          <div class="hero-floating-card">
+            <div class="floating-card-icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+            </div>
+            <div class="floating-card-text">
+              <h4>Bole • Sarbet • Summit</h4>
+              <p>Addis Ababa, Ethiopia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         About & Atmosphere Section
+         ========================================================================== -->
+    <section id="about" class="about-section">
+      <div class="container about-grid">
+        <div class="about-gallery-grid reveal-fade">
+          <!-- Bole Branch Centerpiece Terracotta Tree Hall & Arches (Span 2) -->
+          <div class="about-img-box span-2" data-zoomable data-full-img="assets/images/branch-bole-terracotta-tree-hall.jpg">
+            <img src="assets/images/branch-bole-terracotta-tree-hall.webp" alt="Delmela Bole Branch Terracotta Tree Hall" loading="lazy" width="900" height="500">
+          </div>
+          <!-- Sarbet Branch Brick Wall & Mosaic Pizza Oven -->
+          <div class="about-img-box" data-zoomable data-full-img="assets/images/branch-sarbet-brick-oven-banquette.jpg">
+            <img src="assets/images/branch-sarbet-brick-oven-banquette.webp" alt="Delmela Sarbet Branch Brick Wall and Oven" loading="lazy" width="450" height="450">
+          </div>
+          <!-- Summit Branch Glass Canopy Garden Terrace -->
+          <div class="about-img-box" data-zoomable data-full-img="assets/images/branch-summit-glass-canopy-terrace.jpg">
+            <img src="assets/images/branch-summit-glass-canopy-terrace.webp" alt="Delmela Summit Branch Glass Canopy Terrace" loading="lazy" width="450" height="450">
+          </div>
+        </div>
+
+        <div class="about-content reveal-fade">
+          <div class="section-badge teal">
+            <span data-i18n="about_badge">ስለ ዴልሜላ</span>
+          </div>
+          <h2 class="section-title" data-i18n="about_title">ዘመናዊ ድባብ ከልዩ የእንግዳ አቀባበል ጋር</h2>
+          <p class="section-desc" data-i18n="about_p1">ዴልሜላ ሬስቶራንትና ካፌ በአዲስ አበባ በቦሌ፣ በሳርቤት እና በሰሚት ቅርንጫፎች የሚገኝ ሲሆን፤ ለወዳጅ ዘመድ መገናኛ፣ ለሥራ እረፍትና ለምሳ እንዲሁም ለቁርስና እራት ምቹና ማራኪ ከባቢን የፈጠረ ስፍራ ነው።</p>
+          <p class="section-desc" data-i18n="about_p2">ሬስቶራንቱ በውብ የተፈጥሮ እንጨትና ዘመናዊ አሰራር የተዋበ ውስጠ-ክፍል፣ የጡብ ቅስቶች፣ ክፍት የአየር መናፈሻ እና የተረጋጋ መንፈስ ያለው ሲሆን፣ የጾምም ሆነ የፍስክ አማራጮች ያሏቸው ልዩ ምግቦች በከፍተኛ ጥራት ይዘጋጁበታል።</p>
+
+          <div class="about-features-list">
+            <div class="about-feature-item">
+              <div class="feature-icon-bubble">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+              </div>
+              <div class="feature-body">
+                <h4 data-i18n="about_feat_1_title">ትኩስና የተመረጡ ግብዓቶች</h4>
+                <p data-i18n="about_feat_1_desc">በየቀኑ የሚዘጋጁ ትኩስ ምግቦች፣ የቁርስ ሳህኖች፣ ልዩ ሳንድዊቾችና ዋፍሎች።</p>
+              </div>
+            </div>
+
+            <div class="about-feature-item">
+              <div class="feature-icon-bubble">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg>
+              </div>
+              <div class="feature-body">
+                <h4 data-i18n="about_feat_2_title">3 ምቹ የከተማችን ቅርንጫፎች</h4>
+                <p data-i18n="about_feat_2_desc">በቦሌ፣ በሳርቤት እና በሰሚት የሚገኙ ምቹ፣ ሰፊና ዘመናዊ የመመገቢያ ስፍራዎች።</p>
+              </div>
+            </div>
+
+            <div class="about-feature-item">
+              <div class="feature-icon-bubble">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+              </div>
+              <div class="feature-body">
+                <h4 data-i18n="about_feat_3_title">የጾምና የፍስክ አማራጮች</h4>
+                <p data-i18n="about_feat_3_desc">ለሁሉም ምርጫ የሚሆኑ ጤናማ የቬጋን/የጾም ምግቦችና የተሟሉ የፍስክ ማዕዶች።</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Menu / Culinary Highlights Section (Food & Beverages)
+         ========================================================================== -->
+    <section id="menu" class="menu-section">
+      <div class="container">
+        <div class="section-header reveal-fade">
+          <div class="section-badge">
+            <span data-i18n="menu_badge">የተመረጡ ምግቦች</span>
+          </div>
+          <h2 class="section-title" data-i18n="menu_title">የዴልሜላ ተወዳጅ የምግብና የመጠጥ አይነቶች</h2>
+          <p class="section-desc" data-i18n="menu_desc">ከቁርስ እስከ እራት፣ ከትኩስ መጠጦች እስከ ልዩ ዋፍሎች ድረስ በዴልሜላ የሚቀርቡ ማዕዶች።</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="menu-filter-bar reveal-fade">
+          <button type="button" class="menu-tab-btn active" data-filter="all" data-i18n="menu_tab_all">ሁሉም</button>
+          <button type="button" class="menu-tab-btn" data-filter="breakfast" data-i18n="menu_tab_breakfast">ቁርስና ብረንች</button>
+          <button type="button" class="menu-tab-btn" data-filter="bowls" data-i18n="menu_tab_bowls">ቦውሎችና ሰላጣዎች</button>
+          <button type="button" class="menu-tab-btn" data-filter="sandwiches" data-i18n="menu_tab_sandwiches">ሳንድዊቾችና ራፖች</button>
+          <button type="button" class="menu-tab-btn" data-filter="waffles" data-i18n="menu_tab_waffles">ዋፍሎችና ጣፋጮች</button>
+          <button type="button" class="menu-tab-btn" data-filter="drinks" data-i18n="menu_tab_drinks">መጠጦችና ስሙዚዎች</button>
+        </div>
+
+        <!-- Dishes Grid -->
+        <div class="menu-grid">
+          
+          <!-- Dish 1 -->
+          <article class="dish-card reveal-fade" data-category="sandwiches" data-zoomable data-full-img="assets/images/dish-steak-avocado-sandwich.jpg">
+            <div class="dish-media">
+              <img src="assets/images/dish-steak-avocado-sandwich.webp" alt="Delmela Steak & Avocado Sandwich" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_steak_avocado_tag">ሳንድዊች</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_steak_avocado_title">ስቴክና አቮካዶ ባጌት ሳንድዊች</h3>
+            </div>
+          </article>
+
+          <!-- Dish 2 -->
+          <article class="dish-card reveal-fade" data-category="sandwiches" data-zoomable data-full-img="assets/images/dish-crispy-chicken-wrap-sauce.jpg">
+            <div class="dish-media">
+              <img src="assets/images/dish-crispy-chicken-wrap-sauce.webp" alt="Delmela Crispy Chicken Wrap" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_crispy_chicken_wrap_tag">ራፕ</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_crispy_chicken_wrap_title">የተጠበሰ ዶሮ ራፕ ከድንች ጋር</h3>
+            </div>
+          </article>
+
+          <!-- Dish 3 -->
+          <article class="dish-card reveal-fade" data-category="sandwiches" data-zoomable data-full-img="assets/images/dish-crispy-chicken-burger.jpg">
+            <div class="dish-media">
+              <img src="assets/images/dish-crispy-chicken-burger.webp" alt="Crispy Chicken Burger with Egg" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_crispy_chicken_burger_tag">በርገር</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_crispy_chicken_burger_title">ክሪስፒ ቺከን በርገር ከእንቁላል ጋር</h3>
+            </div>
+          </article>
+
+          <!-- Dish 4 -->
+          <article class="dish-card reveal-fade" data-category="breakfast" data-zoomable data-full-img="assets/images/dish-avocado-toast-eggs.jpg">
+            <div class="dish-media">
+              <img src="assets/images/dish-avocado-toast-eggs.webp" alt="Avocado Toast with Sunny Eggs" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_avocado_toast_tag">ቁርስ</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_avocado_toast_title">አቮካዶ ቶስት ከእንቁላል ጋር</h3>
+            </div>
+          </article>
+
+          <!-- Dish 5 -->
+          <article class="dish-card reveal-fade" data-category="breakfast" data-zoomable data-full-img="assets/images/dish-shakshuka-skillet.jpg">
+            <div class="dish-media">
+              <img src="assets/images/dish-shakshuka-skillet.webp" alt="Iron Skillet Shakshuka" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_shakshuka_tag">ቁርስ</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_shakshuka_title">ትኩስ ሻክሹካ በድስት</h3>
+            </div>
+          </article>
+
+          <!-- Dish 6 -->
+          <article class="dish-card reveal-fade" data-category="breakfast" data-zoomable data-full-img="assets/images/dish-traditional-foul.jpg">
+            <div class="dish-media">
+              <img src="assets/images/dish-traditional-foul.webp" alt="Delmela Traditional Foul" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_foul_tag">ባህላዊ ቁርስ</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_foul_title">ልዩ የዴልሜላ ፉል ከዳቦ ጋር</h3>
+            </div>
+          </article>
+
+          <!-- Dish 7 -->
+          <article class="dish-card reveal-fade" data-category="breakfast" data-zoomable data-full-img="assets/images/dish-scrambled-egg-croissant.jpg">
+            <div class="dish-media">
+              <img src="assets/images/dish-scrambled-egg-croissant.webp" alt="Egg Croissant Breakfast" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_egg_croissant_tag">ቁርስ</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_egg_croissant_title">ስክራምብልድ ኤግ ክሩዋሳን</h3>
+            </div>
+          </article>
+
+          <!-- Dish 8 -->
+          <article class="dish-card reveal-fade" data-category="breakfast" data-zoomable data-full-img="assets/images/dish-savory-egg-breakfast-waffle.jpg">
+            <div class="dish-media">
+              <img src="assets/images/dish-savory-egg-breakfast-waffle.webp" alt="Savory Egg Breakfast Waffle" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_savory_egg_waffle_tag">ቁርስ</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_savory_egg_waffle_title">የእንቁላልና የተጠበሰ ድንች ዋፍል</h3>
+            </div>
+          </article>
+
+          <!-- Dish 9 -->
+          <article class="dish-card reveal-fade" data-category="bowls" data-zoomable data-full-img="assets/images/dish-acai-almond-bowl.jpg">
+            <div class="dish-media">
+              <img src="assets/images/dish-acai-almond-bowl.webp" alt="Acai Almond Superfood Bowl" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_acai_almond_bowl_tag">ጤናማ ቦውል</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_acai_almond_bowl_title">የአሳይና አልሞንድ ፍሬሽ ቦውል</h3>
+            </div>
+          </article>
+
+          <!-- Dish 10 -->
+          <article class="dish-card reveal-fade" data-category="bowls" data-zoomable data-full-img="assets/images/dish-sesame-chicken-bowl.jpg">
+            <div class="dish-media">
+              <img src="assets/images/dish-sesame-chicken-bowl.webp" alt="Sesame Chicken Avocado Bowl" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_sesame_chicken_bowl_tag">ቦውል</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_sesame_chicken_bowl_title">የሰሊጥ ዶሮና አቮካዶ ቦውል</h3>
+            </div>
+          </article>
+
+          <!-- Dish 11 -->
+          <article class="dish-card reveal-fade" data-category="bowls" data-zoomable data-full-img="assets/images/dish-beetroot-avocado-grain-bowl.jpg">
+            <div class="dish-media">
+              <img src="assets/images/dish-beetroot-avocado-grain-bowl.webp" alt="Beetroot Avocado Grain Bowl" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_beetroot_grain_bowl_tag">የጾም / ቬጋን</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_beetroot_grain_bowl_title">ቀይስርና አቮካዶ ቬጂ ቦውል</h3>
+            </div>
+          </article>
+
+          <!-- Dish 12 -->
+          <article class="dish-card reveal-fade" data-category="bowls" data-zoomable data-full-img="assets/images/dish-hummus-spiced-chicken.jpg">
+            <div class="dish-media">
+              <img src="assets/images/dish-hummus-spiced-chicken.webp" alt="Hummus Spiced Chicken Plate" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_hummus_spiced_chicken_tag">ልዩ ማዕድ</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_hummus_spiced_chicken_title">ሁሙስ ከቅመም ዶሮና ዳቦ ጋር</h3>
+            </div>
+          </article>
+
+          <!-- Dish 13 -->
+          <article class="dish-card reveal-fade" data-category="bowls" data-zoomable data-full-img="assets/images/dish-chicken-tikka-naan.jpg">
+            <div class="dish-media">
+              <img src="assets/images/dish-chicken-tikka-naan.webp" alt="Chicken Tikka with Naan and Rice" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_chicken_tikka_naan_tag">ልዩ ማዕድ</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_chicken_tikka_naan_title">ቺከን ቲካ ከሩዝ፣ ናንና ራይታ ጋር</h3>
+            </div>
+          </article>
+
+          <!-- Dish 14 -->
+          <article class="dish-card reveal-fade" data-category="bowls" data-zoomable data-full-img="assets/images/dish-ethiopian-firfir-enjera.jpg">
+            <div class="dish-media">
+              <img src="assets/images/dish-ethiopian-firfir-enjera.webp" alt="Ethiopian Firfir with Enjera" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_ethiopian_firfir_tag">የሀገር ባህል</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_ethiopian_firfir_title">ልዩ ፍርፍር በእንጀራ</h3>
+            </div>
+          </article>
+
+          <!-- Dish 15 -->
+          <article class="dish-card reveal-fade" data-category="waffles" data-zoomable data-full-img="assets/images/dish-belgian-waffle-strawberries.jpg">
+            <div class="dish-media">
+              <img src="assets/images/dish-belgian-waffle-strawberries.webp" alt="Belgian Waffle with Fresh Strawberries" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_belgian_strawberry_waffle_tag">ጣፋጭ ዋፍል</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_belgian_strawberry_waffle_title">ቤልጂየም ዋፍል ከእንጆሪና አይስክሬም ጋር</h3>
+            </div>
+          </article>
+
+          <!-- Dish 16 -->
+          <article class="dish-card reveal-fade" data-category="waffles" data-zoomable data-full-img="assets/images/dish-caramel-apple-waffle.jpg">
+            <div class="dish-media">
+              <img src="assets/images/dish-caramel-apple-waffle.webp" alt="Caramel Apple Waffle" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_caramel_apple_waffle_tag">ጣፋጭ ዋፍል</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_caramel_apple_waffle_title">ካራሜል አፕል ዋፍል</h3>
+            </div>
+          </article>
+
+          <!-- Dish 17 -->
+          <article class="dish-card reveal-fade" data-category="waffles" data-zoomable data-full-img="assets/images/dish-banana-crumble-waffle-leather.jpg">
+            <div class="dish-media">
+              <img src="assets/images/dish-banana-crumble-waffle-leather.webp" alt="Banana Nut Crumble Waffle" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_banana_crumble_waffle_tag">ጣፋጭ ዋፍል</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_banana_crumble_waffle_title">የሙዝ ክራምብል ዋፍል</h3>
+            </div>
+          </article>
+
+          <!-- Dish 18 -->
+          <article class="dish-card reveal-fade" data-category="waffles" data-zoomable data-full-img="assets/images/dish-strawberry-fluffy-pancakes.jpg">
+            <div class="dish-media">
+              <img src="assets/images/dish-strawberry-fluffy-pancakes.webp" alt="Strawberry Pancakes Stack" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_strawberry_pancakes_tag">ጣፋጭ</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_strawberry_pancakes_title">ፍሉፊ ፓንኬክ ከትኩስ እንጆሪ ጋር</h3>
+            </div>
+          </article>
+
+          <!-- Dish 19 -->
+          <article class="dish-card reveal-fade" data-category="drinks" data-zoomable data-full-img="assets/images/drink-fresh-smoothies-trio.jpg">
+            <div class="dish-media">
+              <img src="assets/images/drink-fresh-smoothies-trio.webp" alt="Fresh Fruit Smoothies Trio" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_smoothies_trio_tag">ትኩስ መጠጥ</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_smoothies_trio_title">ትኩስ የተፈጥሮ ስሙዚዎች</h3>
+            </div>
+          </article>
+
+          <!-- Dish 20 -->
+          <article class="dish-card reveal-fade" data-category="drinks" data-zoomable data-full-img="assets/images/drink-fresh-hibiscus-tea-pot.jpg">
+            <div class="dish-media">
+              <img src="assets/images/drink-fresh-hibiscus-tea-pot.webp" alt="Fresh Hibiscus Herbal Tea" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_hibiscus_tea_tag">ትኩስ ሻይ</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_hibiscus_tea_title">የሃይቢስከስ (Hibiscus) ትኩስ ሻይ</h3>
+            </div>
+          </article>
+
+          <!-- Dish 21 -->
+          <article class="dish-card reveal-fade" data-category="drinks" data-zoomable data-full-img="assets/images/drink-chilled-watermelon-juice.jpg">
+            <div class="dish-media">
+              <img src="assets/images/drink-chilled-watermelon-juice.webp" alt="Chilled Watermelon Juice" loading="lazy" width="400" height="300">
+              <span class="dish-tag" data-i18n="dish_watermelon_juice_tag">ቀዝቃዛ ጁስ</span>
+            </div>
+            <div class="dish-info">
+              <h3 class="dish-title" data-i18n="dish_watermelon_juice_title">ትኩስ የተፈጥሮ የሀብሀብ ጁስ</h3>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Visual Gallery Section (Authentic Places of Bole, Sarbet & Summit Branches)
+         ========================================================================== -->
+    <section id="gallery" class="gallery-section">
+      <div class="container">
+        <div class="section-header reveal-fade">
+          <div class="section-badge teal">
+            <span data-i18n="gallery_badge">የፎቶ ማህደር</span>
+          </div>
+          <h2 class="section-title" data-i18n="gallery_title">የዴልሜላ ህይወት በምስል</h2>
+          <p class="section-desc" data-i18n="gallery_desc">የቦሌ፣ የሳርቤትና የሰሚት ቅርንጫፎቻችን ውብ ውስጠ-ክፍል፣ አረንጓዴ ከባቢና የተመረጡ የምግብ ዝግጅቶች።</p>
+        </div>
+
+        <div class="gallery-filter-bar reveal-fade">
+          <button type="button" class="gallery-tab-btn active" data-filter="all" data-i18n="gallery_tab_all">ሁሉም ቅርንጫፎች</button>
+          <button type="button" class="gallery-tab-btn" data-filter="bole" data-i18n="gallery_tab_bole">ቦሌ ቅርንጫፍ</button>
+          <button type="button" class="gallery-tab-btn" data-filter="sarbet" data-i18n="gallery_tab_sarbet">ሳርቤት ቅርንጫፍ</button>
+          <button type="button" class="gallery-tab-btn" data-filter="summit" data-i18n="gallery_tab_summit">ሰሚት ቅርንጫፍ</button>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- Gallery Item 1 - Bole Terracotta Tree Hall -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="bole" data-zoomable data-full-img="assets/images/branch-bole-terracotta-tree-hall.jpg">
+            <img src="assets/images/branch-bole-terracotta-tree-hall.webp" alt="Delmela Bole Branch Terracotta Tree Hall" loading="lazy" width="400" height="300">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon">🔍</div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 2 - Bole Espresso & Chandeliers Bar -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="bole" data-zoomable data-full-img="assets/images/branch-bole-espresso-chandeliers-bar.jpg">
+            <img src="assets/images/branch-bole-espresso-chandeliers-bar.webp" alt="Delmela Bole Branch Espresso Bar" loading="lazy" width="400" height="300">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon">🔍</div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 3 - Bole Dining Hall with Guests -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="bole" data-zoomable data-full-img="assets/images/branch-bole-dining-hall-guests.jpg">
+            <img src="assets/images/branch-bole-dining-hall-guests.webp" alt="Delmela Bole Branch Seated Dining" loading="lazy" width="400" height="300">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon">🔍</div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 4 - Bole Evening Illuminated Sign -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="bole" data-zoomable data-full-img="assets/images/branch-exterior-illuminated-delmela-night.jpg">
+            <img src="assets/images/branch-exterior-illuminated-delmela-night.webp" alt="Delmela Bole Night Sign Canopy" loading="lazy" width="400" height="300">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon">🔍</div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 5 - Bole Main Hall with Staff -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="bole" data-zoomable data-full-img="assets/images/branch-bole-main-hall-staff.jpg">
+            <img src="assets/images/branch-bole-main-hall-staff.webp" alt="Delmela Bole Main Hall Service" loading="lazy" width="400" height="300">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon">🔍</div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 6 - Bole Espresso Pastry Bar -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="bole" data-zoomable data-full-img="assets/images/branch-bole-espresso-pastry-bar.jpg">
+            <img src="assets/images/branch-bole-espresso-pastry-bar.webp" alt="Delmela Bole Modern Pastry Display" loading="lazy" width="400" height="300">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon">🔍</div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 7 - Bole Dining View Counter -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="bole" data-zoomable data-full-img="assets/images/branch-bole-dining-view-counter.jpg">
+            <img src="assets/images/branch-bole-dining-view-counter.webp" alt="Delmela Bole Dining View" loading="lazy" width="400" height="300">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon">🔍</div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 8 - Bole Arched Mirrors & Wave Ceiling -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="bole" data-zoomable data-full-img="assets/images/branch-bole-arched-mirrors-seating.jpg">
+            <img src="assets/images/branch-bole-arched-mirrors-seating.webp" alt="Delmela Bole Arched Mirrors" loading="lazy" width="400" height="300">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon">🔍</div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 8b - Bole Wide Dining Perspective -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="bole" data-zoomable data-full-img="assets/images/branch-bole-wide-dining-perspective.jpg">
+            <img src="assets/images/branch-bole-wide-dining-perspective.webp" alt="Delmela Bole Wide Dining Hall" loading="lazy" width="400" height="300">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon">🔍</div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 9 - Sarbet Brick Oven & Green Banquette -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="sarbet" data-zoomable data-full-img="assets/images/branch-sarbet-brick-oven-banquette.jpg">
+            <img src="assets/images/branch-sarbet-brick-oven-banquette.webp" alt="Delmela Sarbet Branch Brick Wall & Oven" loading="lazy" width="400" height="300">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon">🔍</div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 10 - Sarbet Live Wood-Fired Pizza Oven -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="sarbet" data-zoomable data-full-img="assets/images/branch-sarbet-pizza-oven-flames.jpg">
+            <img src="assets/images/branch-sarbet-pizza-oven-flames.webp" alt="Delmela Sarbet Pizza Oven Flames" loading="lazy" width="400" height="300">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon">🔍</div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 11 - Sarbet Brick Arch Window View -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="sarbet" data-zoomable data-full-img="assets/images/branch-sarbet-brick-arch-window.jpg">
+            <img src="assets/images/branch-sarbet-brick-arch-window.webp" alt="Delmela Sarbet Brick Arch Window" loading="lazy" width="400" height="300">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon">🔍</div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 12 - Sarbet Rustic Brick Corner -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="sarbet" data-zoomable data-full-img="assets/images/branch-sarbet-rustic-brick-corner.jpg">
+            <img src="assets/images/branch-sarbet-rustic-brick-corner.webp" alt="Delmela Sarbet Rustic Table Corner" loading="lazy" width="400" height="300">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon">🔍</div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 13 - Sarbet Brick Hallway Banquette -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="sarbet" data-zoomable data-full-img="assets/images/branch-sarbet-brick-hallway-banquette.jpg">
+            <img src="assets/images/branch-sarbet-brick-hallway-banquette.webp" alt="Delmela Sarbet Brick Hallway" loading="lazy" width="400" height="300">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon">🔍</div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 14 - Sarbet Black Arched French Doors -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="sarbet" data-zoomable data-full-img="assets/images/branch-sarbet-arched-french-doors.jpg">
+            <img src="assets/images/branch-sarbet-arched-french-doors.webp" alt="Delmela Sarbet Arched French Doors" loading="lazy" width="400" height="300">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon">🔍</div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 15 - Summit Branch Distressed Wood Facade -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="summit" data-zoomable data-full-img="assets/images/branch-summit-exterior-rustic-patio.jpg">
+            <img src="assets/images/branch-summit-exterior-rustic-patio.webp" alt="Delmela Summit Branch Rustic Sign" loading="lazy" width="400" height="300">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon">🔍</div>
+            </div>
+          </div>
+
+          <!-- Gallery Item 16 - Summit Glass Canopy Garden Terrace -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="summit" data-zoomable data-full-img="assets/images/branch-summit-glass-canopy-terrace.jpg">
+            <img src="assets/images/branch-summit-glass-canopy-terrace.webp" alt="Delmela Summit Glass Canopy Terrace" loading="lazy" width="400" height="300">
+            <div class="gallery-overlay">
+              <div class="gallery-zoom-icon">🔍</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Multi-Branch Location, Interactive Google Maps & Direct Delivery Section
+         ========================================================================== -->
+    <section id="location" class="location-section">
+      <div class="container">
+        <div class="section-header reveal-fade">
+          <div class="section-badge">
+            <span data-i18n="location_badge">ቅርንጫፎቻችንና አድራሻ</span>
+          </div>
+          <h2 class="section-title" data-i18n="location_title">3ቱ የዴልሜላ ቅርንጫፎች</h2>
+          <p class="section-desc" data-i18n="location_desc">ለእርስዎ ቅርብ በሆነው የቦሌ፣ የሳርቤት ወይም የሰሚት ቅርንጫፋችን ይጎብኙን።</p>
+        </div>
+
+        <!-- Branch Selector Switcher -->
+        <div class="branch-selector-bar reveal-fade" role="tablist" aria-label="Branch Selector">
+          <button type="button" class="branch-tab-btn active" data-branch="bole" role="tab" aria-selected="true" data-i18n="branch_tab_bole">
+            📍 ቦሌ (Bole)
+          </button>
+          <button type="button" class="branch-tab-btn" data-branch="sarbet" role="tab" aria-selected="false" data-i18n="branch_tab_sarbet">
+            📍 ሳርቤት (Sarbet)
+          </button>
+          <button type="button" class="branch-tab-btn" data-branch="summit" role="tab" aria-selected="false" data-i18n="branch_tab_summit">
+            📍 ሰሚት (Summit)
+          </button>
+        </div>
+
+        <div class="location-grid">
+          <!-- Information Column -->
+          <div class="location-cards-stack reveal-fade">
+            
+            <!-- Address Card -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <div class="info-icon-bubble">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                </div>
+                <div>
+                  <h3 id="branch-active-name" data-i18n="branch_bole_name">ቦሌ ቅርንጫፍ (Bole Branch)</h3>
+                  <p id="branch-active-address" data-i18n="branch_bole_address">ቦሌ (ሚሌኒየም አዳራሽና አምባሳደር ሆቴል አካባቢ)፣ አዲስ አበባ</p>
+                </div>
+              </div>
+              <p id="branch-active-desc" style="margin-top: 10px; font-size: 14px; color: var(--text-muted);" data-i18n="branch_bole_desc">
+                የተፈጥሮ ዛፍ ያረፈበት ማዕከላዊ የመመገቢያ አዳራሽ፣ ሰፊ መስኮቶችና ምቹ ድባብ።
+              </p>
+            </div>
+
+            <!-- Hours Card -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <div class="info-icon-bubble teal">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                </div>
+                <div>
+                  <h3 data-i18n="hours_title">የስራ ሰዓት</h3>
+                  <p data-i18n="hours_val">ከሰኞ እስከ እሑድ፡ ከጠዋቱ 2:00 እስከ ማታ 4:00 (8:00 AM – 10:00 PM)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Phones -->
+            <div class="info-card">
+              <div class="info-card-header">
+                <div class="info-icon-bubble">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.02l-2.21 2.19z"/></svg>
+                </div>
+                <div>
+                  <h3 data-i18n="phone_title">ስልክ ቁጥር</h3>
+                </div>
+              </div>
+              <div class="phones-list">
+                <a id="branch-phone-1" href="tel:+251980635959" class="phone-chip">
+                  <span>📞</span> <span class="phone-text">+251 98 063 5959</span>
+                </a>
+                <a id="branch-phone-2" href="tel:+251935955598" class="phone-chip">
+                  <span>📞</span> <span class="phone-text">+251 93 595 5598</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Delivery Platforms -->
+            <div class="info-card">
+              <h3 data-i18n="delivery_title">የማድረስ አገልግሎት</h3>
+              <p data-i18n="delivery_desc">በ Deliver Addis፣ Zmall እና RIDE Food በኩል ወደሚፈልጉት ቦታ ማዘዝ ይችላሉ።</p>
+              <div class="delivery-platforms-list">
+                <a href="https://linktr.ee/delmela" target="_blank" rel="noopener noreferrer" class="delivery-badge" data-i18n="btn_order_deliver_addis">በ Deliver Addis እዘዙ</a>
+                <a href="https://linktr.ee/delmela" target="_blank" rel="noopener noreferrer" class="delivery-badge" data-i18n="btn_order_zmall">በ Zmall እዘዙ</a>
+                <a href="https://linktr.ee/delmela" target="_blank" rel="noopener noreferrer" class="delivery-badge" data-i18n="btn_order_ride_food">በ RIDE Food እዘዙ</a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Google Maps Dynamic Frame -->
+          <div class="map-container-box reveal-fade">
+            <div class="map-embed-wrapper">
+              <!-- Dynamic Map Embed Iframe -->
+              <iframe 
+                id="branch-map-iframe"
+                src="https://maps.google.com/maps?q=8.992143,38.788249&hl=en&z=16&output=embed"
+                title="Delmela Restaurant Location Map Addis Ababa"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="map-action-bar">
+              <div class="map-action-text">
+                <strong>Delmela Restaurant & Café</strong><br>
+                Bole • Sarbet • Summit (Addis Ababa)
+              </div>
+              <a id="branch-directions-btn" href="https://www.google.com/maps/search/?api=1&query=8.992143,38.788249" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                <span data-i18n="btn_get_directions">አቅጣጫ በጎግል ካርታ (Google Maps)</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Contact & Verified Social Connect Section
+         ========================================================================== -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header reveal-fade">
+          <div class="section-badge">
+            <span data-i18n="contact_badge">ያግኙን</span>
+          </div>
+          <h2 class="section-title" data-i18n="contact_title">ለጥያቄዎና ለቦታ ማስያዝ ዝግጁ ነን</h2>
+          <p class="section-desc" data-i18n="contact_desc">በስልክ ይደውሉልን ወይም በይፋዊ የማህበራዊ ገጾቻችን ያግኙን።</p>
+        </div>
+
+        <div class="social-cards-grid">
+          <!-- Facebook Card -->
+          <div class="social-card reveal-fade">
+            <div>
+              <div class="social-card-top">
+                <div class="social-icon-wrapper fb">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </div>
+                <h3 data-i18n="social_fb_title">ፌስቡክ (Facebook)</h3>
+              </div>
+              <p data-i18n="social_fb_desc">የቅርብ ጊዜ ዜናዎችንና ዝግጅቶችን በይፋዊ የፌስቡክ ገጻችን ይከታተሉ።</p>
+            </div>
+            <a href="https://www.facebook.com/share/1BjKPmk4Zw/" target="_blank" rel="noopener noreferrer" class="btn btn-facebook">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              <span data-i18n="social_fb_btn">ወደ ፌስቡክ ገጽ ይሂዱ</span>
+            </a>
+          </div>
+
+          <!-- Instagram Card -->
+          <div class="social-card reveal-fade">
+            <div>
+              <div class="social-card-top">
+                <div class="social-icon-wrapper ig">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </div>
+                <h3 data-i18n="social_ig_title">ኢንስታግራም (Instagram @_delmela)</h3>
+              </div>
+              <p data-i18n="social_ig_desc">አዳዲስ ፎቶዎችን፣ ቪዲዮዎችንና ልዩ ማዕዶችን በይፋዊ የኢንስታግራም ገጻችን @_delmela ይመልከቱ።</p>
+            </div>
+            <a href="https://www.instagram.com/_delmela/" target="_blank" rel="noopener noreferrer" class="btn btn-instagram">
+              <span data-i18n="social_ig_btn">ኢንስታግራም @_delmela</span>
+            </a>
+          </div>
+
+          <!-- Linktree Card -->
+          <div class="social-card reveal-fade">
+            <div>
+              <div class="social-card-top">
+                <div class="social-icon-wrapper linktree">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M13.511 5.854l3.784-3.783L18.707 3.48l-3.784 3.784h4.942v1.996h-5.263l3.784 3.783-1.412 1.41-4.708-4.707v10.978H10.25V9.746L5.542 14.453l-1.412-1.41 3.784-3.783H2.651V7.264h4.942L3.809 3.48l1.412-1.41 3.784 3.784V0h4.506v5.854z"/></svg>
+                </div>
+                <h3 data-i18n="social_linktree_title">ሊንክትሪ (Linktree)</h3>
+              </div>
+              <p data-i18n="social_linktree_desc">ሁሉንም የዴልሜላ ማዘዣና ማህበራዊ አድራሻዎች በአንድ ላይ ያግኙ።</p>
+            </div>
+            <a href="https://linktr.ee/delmela" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white">
+              <span data-i18n="social_linktree_btn">ሊንክትሪን ይክፈቱ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       Footer & Sample Disclaimer
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h2>Delmela</h2>
+          <p data-i18n="about_p1">ዴልሜላ ሬስቶራንትና ካፌ በአዲስ አበባ በቦሌ፣ በሳርቤት እና በሰሚት ቅርንጫፎች የሚገኝ ሲሆን፤ ለወዳጅ ዘመድ መገናኛ፣ ለሥራ እረፍትና ለምሳ እንዲሁም ለቁርስና እራት ምቹና ማራኪ ከባቢን የፈጠረ ስፍራ ነው።</p>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_quick_links">ፈጣን አገናኞች</h4>
+          <ul class="footer-links-list">
+            <li><a href="#home" data-i18n="nav_home">ዋና ገጽ</a></li>
+            <li><a href="#about" data-i18n="nav_about">ስለ ዴልሜላ</a></li>
+            <li><a href="#menu" data-i18n="nav_menu">ምግቦችና መጠጦች</a></li>
+            <li><a href="#gallery" data-i18n="nav_gallery">የፎቶ ማህደር</a></li>
+            <li><a href="#location" data-i18n="nav_location">አድራሻና ካርታ</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">ያግኙን</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_branches">ቅርንጫፎች</h4>
+          <ul class="footer-links-list">
+            <li><a href="#location" data-i18n="footer_branch_bole">ቦሌ (ሚሌኒየም አዳራሽ)</a></li>
+            <li><a href="#location" data-i18n="footer_branch_sarbet">ሳርቤት (ቢስራተ ገብርኤል)</a></li>
+            <li><a href="#location" data-i18n="footer_branch_summit">ሰሚት (ሰፋሪ)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_services">አገልግሎቶች</h4>
+          <ul class="footer-links-list">
+            <li data-i18n="footer_service_1">ምቹ የመመገቢያ አዳራሽ (3ቱም ቅርንጫፎች)</li>
+            <li data-i18n="footer_service_2">ትኩስ ቡናና የካፌ አገልግሎት</li>
+            <li data-i18n="footer_service_3">የጾምና የፍስክ ምግቦች</li>
+            <li data-i18n="footer_service_4">ፈጣን የማድረስ አገልግሎት</li>
+            <li data-i18n="footer_service_5">የስራና የቤተሰብ መሰብሰቢያ</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © 2026 Delmela Restaurant & Café. <span data-i18n="footer_rights">መብቱ በህግ የተጠበቀ ነው።</span>
+        </div>
+        <div class="footer-sample-notice" data-i18n="footer_disclaimer">
+          ማስታወሻ፡ ይህ ድረ-ገጽ በ Possible Technology P.L.C. የተዘጋጀ ያልተጠየቀ የሙከራ ናሙና ድረ-ገጽ (Unsolicited Sample Project) ነው።
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Native Lightbox Dialog Component (Uncropped High-Res View)
+       ========================================================================== -->
+  <dialog id="lightbox-dialog" class="lightbox-dialog" aria-label="Photo Preview">
+    <div class="lightbox-wrapper">
+      <button type="button" id="lightbox-close-btn" class="lightbox-close-btn" aria-label="Close photo preview">✕</button>
+      <img id="lightbox-img" src="" alt="Enlarged Photo View" class="lightbox-img">
+    </div>
+  </dialog>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
