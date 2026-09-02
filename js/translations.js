@@ -20,6 +20,8 @@ const translations = {
 
     // Hero Section
     hero_badge: "ቦሌ • ሳርቤት • ሰሚት • አዲስ አበባ",
+    live_status_open: "አሁን ክፍት ነው (ክፍት እስከ ማታ 4:00)",
+    live_status_closed: "አሁን ዝግ ነው (ነገ 2:00 ላይ ይከፈታል)",
     hero_title: "ጣዕምና ምቾት የተገናኙበት የከተማችን ድንቅ ማረፊያ",
     hero_desc: "በአዲስ አበባ ቦሌ፣ ሳርቤትና ሰሚት ቅርንጫፎች የሚገኘው ዴልሜላ ሬስቶራንትና ካፌ፤ ትኩስና የተመረጡ ምግቦችን፣ ጤናማ ቦውሎችን፣ በእጅ የተዘጋጁ ሳንድዊቾችን፣ ልዩ ዋፍሎችንና ጣፋጭ መጠጦችን በምቹ ድባብ ያቀርባል።",
     hero_cta_location: "አድራሻችንን ይመልከቱ",
@@ -194,6 +196,8 @@ const translations = {
 
     // Hero Section
     hero_badge: "Bole • Sarbet • Summit • Addis Ababa",
+    live_status_open: "Open Now (Until 10:00 PM)",
+    live_status_closed: "Closed Now (Opens at 8:00 AM)",
     hero_title: "Where Culinary Craft Meets Modern Comfort",
     hero_desc: "Across our Bole, Sarbet, and Summit locations in Addis Ababa, Delmela Restaurant & Café offers artisanal bowls, handcrafted sandwiches, fresh Belgian waffles, wholesome breakfast plates, and vibrant smoothies in an inviting atmosphere.",
     hero_cta_location: "View Branches & Map",

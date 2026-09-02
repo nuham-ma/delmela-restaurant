@@ -75,12 +75,37 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    // Update live operating status
+    updateLiveStatus();
+
     // Update active branch specific texts
     updateBranchUI(activeBranch);
 
     // Update document title
     if (translations[lang].site_title) {
       document.title = translations[lang].site_title;
+    }
+  }
+
+  function updateLiveStatus() {
+    const liveStatusPill = document.getElementById('hero-live-status');
+    const liveStatusText = document.getElementById('live-status-text');
+    if (!liveStatusPill || !liveStatusText) return;
+
+    // Calculate current Addis Ababa Time (UTC+3)
+    const now = new Date();
+    const utcHours = now.getUTCHours();
+    const eatHours = (utcHours + 3) % 24;
+
+    // Open from 8:00 AM (8) to 10:00 PM (22)
+    const isOpen = eatHours >= 8 && eatHours < 22;
+
+    if (isOpen) {
+      liveStatusPill.classList.remove('closed');
+      liveStatusText.textContent = translations[currentLang].live_status_open || 'Open Now (Until 10:00 PM)';
+    } else {
+      liveStatusPill.classList.add('closed');
+      liveStatusText.textContent = translations[currentLang].live_status_closed || 'Closed Now (Opens at 8:00 AM)';
     }
   }
 
