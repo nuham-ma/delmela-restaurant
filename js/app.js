@@ -3,10 +3,29 @@
  * Bilingual i18n, Multi-Branch location switcher, filtering, lightbox, and animations
  */
 
-document.addEventListener('DOMContentLoaded', () => {
+import translationsData from './translations.js';
+
+function getSavedLang() {
+  try {
+    return localStorage.getItem('delmela_lang');
+  } catch (e) {
+    return null;
+  }
+}
+
+function setSavedLang(lang) {
+  try {
+    localStorage.setItem('delmela_lang', lang);
+  } catch (e) {}
+}
+
+function initApp() {
+  const translations = window.translations || translationsData;
+  if (!translations) return;
+
   // 1. Bilingual State & I18n Engine
   const defaultLang = 'am'; // Amharic as default per requirements
-  let currentLang = localStorage.getItem('delmela_lang') || defaultLang;
+  let currentLang = getSavedLang() || defaultLang;
 
   const langAmBtns = document.querySelectorAll('.lang-btn-am');
   const langEnBtns = document.querySelectorAll('.lang-btn-en');
@@ -59,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function setLanguage(lang) {
     if (!translations[lang]) return;
     currentLang = lang;
-    localStorage.setItem('delmela_lang', lang);
+    setSavedLang(lang);
     document.documentElement.lang = lang;
 
     // Update active class on all language switcher buttons (desktop + mobile)
@@ -195,6 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isOpen = mobileDrawer.classList.toggle('open');
     menuToggleBtn.classList.toggle('open', isOpen);
     menuToggleBtn.setAttribute('aria-expanded', isOpen);
+    mobileDrawer.setAttribute('aria-hidden', !isOpen);
     document.body.style.overflow = isOpen ? 'hidden' : '';
   }
 
@@ -202,6 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileDrawer.classList.remove('open');
     menuToggleBtn.classList.remove('open');
     menuToggleBtn.setAttribute('aria-expanded', 'false');
+    mobileDrawer.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
   }
 
@@ -293,9 +314,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Scroll Reveal Observer
+  // 7. Scroll Reveal Observer with Mobile Failsafe
   const revealElements = document.querySelectorAll('.reveal-fade');
-  if ('IntersectionObserver' in window) {
+  const isMobile = window.innerWidth <= 768;
+
+  if (isMobile) {
+    // Immediate display on mobile devices
+    revealElements.forEach(el => el.classList.add('is-visible'));
+  } else if ('IntersectionObserver' in window) {
+    document.documentElement.classList.add('js-ready');
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -303,10 +330,21 @@ document.addEventListener('DOMContentLoaded', () => {
           obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.05, rootMargin: '0px 0px 50px 0px' });
 
     revealElements.forEach(el => observer.observe(el));
+
+    // Failsafe: Ensure all elements are visible after delay even if observer misses
+    setTimeout(() => {
+      revealElements.forEach(el => el.classList.add('is-visible'));
+    }, 500);
   } else {
     revealElements.forEach(el => el.classList.add('is-visible'));
   }
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
