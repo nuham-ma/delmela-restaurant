@@ -787,21 +787,24 @@ h1, h2, h3, h4, h5, h6 {
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 52px;
-  align-items: center;
+  gap: 48px;
+  align-items: stretch;
 }
 
 .about-gallery-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 18px;
+  height: 100%;
 }
 
 .about-img-box {
   border-radius: var(--radius-md);
   overflow: hidden;
   position: relative;
-  aspect-ratio: 4 / 3;
+  height: 100%;
+  min-height: 270px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   border: 1px solid var(--border-subtle);
   cursor: pointer;
@@ -1062,68 +1065,26 @@ h1, h2, h3, h4, h5, h6 {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
 }
 
 .gallery-item {
   position: relative;
-  border-radius: 18px;
+  border-radius: 16px;
   overflow: hidden;
-  aspect-ratio: 16 / 11;
-  min-height: 260px;
+  aspect-ratio: 4 / 3;
   cursor: pointer;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
   background-color: var(--bg-subtle);
   border: 1px solid var(--border-light);
-  transition: var(--transition);
-}
-
-.gallery-branch-badge {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background-color: rgba(20, 19, 17, 0.85);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: #FFFFFF;
-  font-size: 12.5px;
-  font-weight: 700;
-  padding: 5px 12px;
-  border-radius: var(--radius-full);
-  z-index: 2;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-.gallery-caption-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 24px 18px 14px 18px;
-  background: linear-gradient(180deg, transparent 0%, rgba(15, 14, 12, 0.9) 100%);
-  color: #FFFFFF;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.gallery-caption-title {
-  font-size: 15px;
-  font-weight: 700;
-  margin-bottom: 2px;
-  color: #FFFFFF;
-}
-
-.gallery-caption-desc {
-  font-size: 12.5px;
-  color: #E2DDD5;
-  line-height: 1.35;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .gallery-item:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+  border-color: var(--accent-amber);
 }
 
 .gallery-item img {
@@ -1136,32 +1097,31 @@ h1, h2, h3, h4, h5, h6 {
 .gallery-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(20, 19, 17, 0.4);
+  background: rgba(20, 19, 17, 0.28);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   backdrop-filter: blur(2px);
-  transition: var(--transition);
+  transition: opacity 0.3s ease;
 }
 
 .gallery-zoom-icon {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.96);
   color: var(--text-main);
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: scale(0.8);
-  transition: var(--transition);
-  font-size: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(0.85);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
 }
 
 .gallery-item:hover img {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 .gallery-item:hover .gallery-overlay {
@@ -1605,6 +1565,19 @@ h1, h2, h3, h4, h5, h6 {
     gap: 40px;
   }
 
+  .about-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    height: auto;
+    gap: 16px;
+  }
+
+  .about-img-box {
+    aspect-ratio: 1 / 1;
+    min-height: auto;
+    height: auto;
+  }
+
   .hero-visual {
     max-width: 650px;
     margin: 0 auto;
@@ -1751,11 +1724,16 @@ h1, h2, h3, h4, h5, h6 {
 
   .about-gallery-grid {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    height: auto;
+    min-height: auto;
     gap: 12px;
   }
 
   .about-img-box {
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    min-height: auto;
     border-radius: var(--radius-sm);
   }
 
@@ -1797,12 +1775,13 @@ h1, h2, h3, h4, h5, h6 {
 
   .gallery-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 18px;
   }
 
   .gallery-item {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 4 / 3;
     min-height: auto;
+    border-radius: 14px;
   }
 
   .branch-selector-bar {
