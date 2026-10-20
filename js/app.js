@@ -41,7 +41,7 @@ function initApp() {
       phone1Display: '+251 98 063 5959',
       phone2: '+251935955598',
       phone2Display: '+251 93 595 5598',
-      img: 'assets/images/interior-centerpiece-indoor-tree.webp',
+      img: 'assets/images/branch-summit-d5.webp',
       mapUrl: 'https://maps.google.com/maps?q=8.992143,38.788249&hl=en&z=16&output=embed',
       directionsUrl: 'https://www.google.com/maps/search/?api=1&query=8.992143,38.788249'
     },
@@ -54,7 +54,7 @@ function initApp() {
       phone1Display: '+251 93 595 5598',
       phone2: '+251980635959',
       phone2Display: '+251 98 063 5959',
-      img: 'assets/images/interior-arched-brick-window-sunlight.webp',
+      img: 'assets/images/branch-sarbet-d2.webp',
       mapUrl: 'https://maps.google.com/maps?q=8.9965,38.7350&hl=en&z=16&output=embed',
       directionsUrl: 'https://www.google.com/maps/search/?api=1&query=8.9965,38.7350'
     },
@@ -67,7 +67,7 @@ function initApp() {
       phone1Display: '+251 98 063 5959',
       phone2: '+251935955598',
       phone2Display: '+251 93 595 5598',
-      img: 'assets/images/restaurant-exterior-rustic-patio.webp',
+      img: 'assets/images/branch-bole-d1.webp',
       mapUrl: 'https://maps.google.com/maps?q=9.0210,38.8520&hl=en&z=16&output=embed',
       directionsUrl: 'https://www.google.com/maps/search/?api=1&query=9.0210,38.8520'
     }

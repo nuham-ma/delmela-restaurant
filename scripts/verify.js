@@ -1,9 +1,13 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import translations from '../js/translations.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const baseDir = path.join(__dirname, '..');
 const html = fs.readFileSync(path.join(baseDir, 'index.html'), 'utf8');
-const translations = require(path.join(baseDir, 'js', 'translations.js'));
 
 // 1. Verify image paths
 const imgRegex = /(?:src|data-full-img)="([^"]+)"/g;

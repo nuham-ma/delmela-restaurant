@@ -6,10 +6,10 @@
   <meta name="description" content="Delmela Restaurant & Café — Bole, Sarbet, and Summit, Addis Ababa. Artisanal bowls, sandwiches, waffles, smoothies, and cozy modern dining.">
   <title>ዴልሜላ ሬስቶራንትና ካፌ | Delmela Restaurant Addis Ababa</title>
 
-  <!-- Google Fonts: Plus Jakarta Sans, Playfair Display, Noto Sans Ethiopic -->
+  <!-- Google Fonts: Plus Jakarta Sans, Playfair Display, Noto Serif Ethiopic, Noto Sans Ethiopic -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700;800&family=Noto+Serif+Ethiopic:wght@600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -21,12 +21,7 @@
   <header class="header">
     <div class="container nav-wrapper">
       <a href="#home" class="brand-logo" aria-label="Delmela Restaurant">
-        <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <circle cx="20" cy="20" r="20" fill="#D97706"/>
-          <path d="M12 21C12 16.5 15.5 13 20 13C24.5 13 28 16.5 28 21C28 25.5 24.5 27 20 27C15.5 27 12 25.5 12 21Z" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
-          <path d="M16 21C16 19 18 17.5 20 17.5C22 17.5 24 19 24 21" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="20" cy="22" r="1.5" fill="#FFFFFF"/>
-        </svg>
+        <img src="assets/images/delmela-logo.webp" alt="Delmela Restaurant & Café Logo" class="brand-logo-img" width="44" height="44">
         <div>
           <span class="brand-wordmark">Delmela</span>
           <div class="brand-tagline-mini">Bole • Sarbet • Summit</div>
@@ -49,10 +44,10 @@
       <div class="nav-actions">
         <div class="lang-toggle" role="group" aria-label="Language Selector">
           <button type="button" class="lang-btn lang-btn-am active" aria-label="Switch to Amharic">
-            <span>🇪🇹</span> አማርኛ
+            <span class="lang-code">አማ</span> አማርኛ
           </button>
           <button type="button" class="lang-btn lang-btn-en" aria-label="Switch to English">
-            <span>🇬🇧</span> EN
+            <span class="lang-code">EN</span> English
           </button>
         </div>
 
@@ -74,6 +69,13 @@
   <!-- Mobile Drawer Menu -->
   <div class="mobile-drawer" aria-hidden="true">
     <div class="mobile-drawer-content">
+      <div class="mobile-drawer-brand" style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border-subtle);">
+        <img src="assets/images/delmela-logo.webp" alt="Delmela Logo" class="brand-logo-img" width="40" height="40">
+        <div>
+          <span class="brand-wordmark" style="font-size: 24px;">Delmela</span>
+          <div class="brand-tagline-mini">Bole • Sarbet • Summit</div>
+        </div>
+      </div>
       <ul class="mobile-nav-links">
         <li><a href="#home" class="mobile-nav-link" data-i18n="nav_home">ዋና ገጽ</a></li>
         <li><a href="#about" class="mobile-nav-link" data-i18n="nav_about">ስለ ዴልሜላ</a></li>
@@ -156,20 +158,13 @@
         </div>
 
         <div class="hero-visual reveal-fade">
-          <div class="hero-image-frame" data-zoomable data-full-img="assets/images/branch-bole-terracotta-tree-hall.jpg">
-            <img src="assets/images/branch-bole-terracotta-tree-hall.webp" alt="Delmela Bole Branch Atmosphere" class="hero-main-img" fetchpriority="high" width="900" height="720">
-            <div class="hero-badge-tag">
-              <span>★</span> Delmela Dining
-            </div>
-          </div>
-
-          <div class="hero-floating-card">
-            <div class="floating-card-icon">
-              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
-            </div>
-            <div class="floating-card-text">
-              <h4>Bole • Sarbet • Summit</h4>
-              <p>Addis Ababa, Ethiopia</p>
+          <div class="hero-image-frame" data-zoomable data-full-img="assets/images/hero-delmela-d6.jpg">
+            <img src="assets/images/hero-delmela-d6.webp" alt="Delmela Restaurant Interior Atmosphere" class="hero-main-img" fetchpriority="high" width="974" height="1280">
+            
+            <!-- Official Logo Floating Badge -->
+            <div class="hero-floating-badge">
+              <img src="assets/images/delmela-logo.webp" alt="Delmela Logo" class="hero-floating-logo" width="28" height="28">
+              <span class="hero-floating-badge-text" data-i18n="hero_floating_badge_sub">ቦሌ • ሳርቤት • ሰሚት (Addis Ababa)</span>
             </div>
           </div>
         </div>
@@ -182,17 +177,21 @@
     <section id="about" class="about-section">
       <div class="container about-grid">
         <div class="about-gallery-grid reveal-fade">
-          <!-- Bole Branch Centerpiece Terracotta Tree Hall & Arches (Span 2) -->
-          <div class="about-img-box span-2" data-zoomable data-full-img="assets/images/branch-bole-terracotta-tree-hall.jpg">
-            <img src="assets/images/branch-bole-terracotta-tree-hall.webp" alt="Delmela Bole Branch Terracotta Tree Hall" loading="lazy" width="900" height="500">
+          <!-- Photo 1: Bole Branch Dining Hall (d1) -->
+          <div class="about-img-box" data-zoomable data-full-img="assets/images/branch-bole-d1.jpg">
+            <img src="assets/images/branch-bole-d1.webp" alt="Delmela Dining Hall & Arches" loading="lazy" width="600" height="450">
           </div>
-          <!-- Sarbet Branch Brick Wall & Mosaic Pizza Oven -->
-          <div class="about-img-box" data-zoomable data-full-img="assets/images/branch-sarbet-brick-oven-banquette.jpg">
-            <img src="assets/images/branch-sarbet-brick-oven-banquette.webp" alt="Delmela Sarbet Branch Brick Wall and Oven" loading="lazy" width="450" height="450">
+          <!-- Photo 2: Sarbet Branch Arches (d2) -->
+          <div class="about-img-box" data-zoomable data-full-img="assets/images/branch-sarbet-d2.jpg">
+            <img src="assets/images/branch-sarbet-d2.webp" alt="Delmela Terracotta Arched Interior" loading="lazy" width="600" height="450">
           </div>
-          <!-- Summit Branch Glass Canopy Garden Terrace -->
-          <div class="about-img-box" data-zoomable data-full-img="assets/images/branch-summit-glass-canopy-terrace.jpg">
-            <img src="assets/images/branch-summit-glass-canopy-terrace.webp" alt="Delmela Summit Branch Glass Canopy Terrace" loading="lazy" width="450" height="450">
+          <!-- Photo 3: Sarbet Branch Espresso Bar & Booths (d3) -->
+          <div class="about-img-box" data-zoomable data-full-img="assets/images/branch-sarbet-d3.jpg">
+            <img src="assets/images/branch-sarbet-d3.webp" alt="Delmela Espresso Bar & Seating" loading="lazy" width="600" height="450">
+          </div>
+          <!-- Photo 4: Summit Branch Garden Patio (d5) -->
+          <div class="about-img-box" data-zoomable data-full-img="assets/images/branch-summit-d5.jpg">
+            <img src="assets/images/branch-summit-d5.webp" alt="Delmela Garden Terrace & Woodwork" loading="lazy" width="600" height="450">
           </div>
         </div>
 
@@ -211,7 +210,7 @@
               </div>
               <div class="feature-body">
                 <h4 data-i18n="about_feat_1_title">ትኩስና የተመረጡ ግብዓቶች</h4>
-                <p data-i18n="about_feat_1_desc">በየቀኑ የሚዘጋጁ ትኩስ ምግቦች፣ የቁርስ ሳህኖች፣ ልዩ ሳንድዊቾችና ዋፍሎች።</p>
+                <p data-i18n="about_feat_1_desc">በየቀኑ የሚዘጋጁ ትኩስ ምግቦች፣ ልዩ ሳንድዊቾችና ዋፍሎች።</p>
               </div>
             </div>
 
@@ -521,139 +520,78 @@
         </div>
 
         <div class="gallery-grid">
-          <!-- Gallery Item 1 - Bole Terracotta Tree Hall -->
-          <div class="gallery-item reveal-fade" data-gallery-cat="bole" data-zoomable data-full-img="assets/images/branch-bole-terracotta-tree-hall.jpg">
-            <img src="assets/images/branch-bole-terracotta-tree-hall.webp" alt="Delmela Bole Branch Terracotta Tree Hall" loading="lazy" width="400" height="300">
+          <!-- Gallery Item 1 - Bole Branch (d5 - assigned from Summit) -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="bole" data-zoomable data-full-img="assets/images/branch-summit-d5.jpg">
+            <span class="gallery-branch-badge" data-i18n="gallery_tab_bole">ቦሌ ቅርንጫፍ</span>
+            <img src="assets/images/branch-summit-d5.webp" alt="Delmela Bole Branch Garden Patio & Modern Interior" loading="lazy" width="1280" height="1280">
+            <div class="gallery-caption-bar">
+              <h3 class="gallery-caption-title" data-i18n="gallery_item_bole_1_title">ቦሌ ቅርንጫፍ (Bole Branch)</h3>
+              <p class="gallery-caption-desc" data-i18n="gallery_item_bole_1_desc">የአትክልት መናፈሻ፣ ክፍት በረንዳና ዘመናዊ ውስጠ-ክፍል</p>
+            </div>
             <div class="gallery-overlay">
-              <div class="gallery-zoom-icon">🔍</div>
+              <div class="gallery-zoom-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </div>
             </div>
           </div>
 
-          <!-- Gallery Item 2 - Bole Espresso & Chandeliers Bar -->
-          <div class="gallery-item reveal-fade" data-gallery-cat="bole" data-zoomable data-full-img="assets/images/branch-bole-espresso-chandeliers-bar.jpg">
-            <img src="assets/images/branch-bole-espresso-chandeliers-bar.webp" alt="Delmela Bole Branch Espresso Bar" loading="lazy" width="400" height="300">
+          <!-- Gallery Item 2 - Sarbet Branch (d2) -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="sarbet" data-zoomable data-full-img="assets/images/branch-sarbet-d2.jpg">
+            <span class="gallery-branch-badge" data-i18n="gallery_tab_sarbet">ሳርቤት ቅርንጫፍ</span>
+            <img src="assets/images/branch-sarbet-d2.webp" alt="Delmela Sarbet Branch Terracotta Arches" loading="lazy" width="1280" height="1280">
+            <div class="gallery-caption-bar">
+              <h3 class="gallery-caption-title" data-i18n="gallery_item_sarbet_1_title">ሳርቤት ቅርንጫፍ (Sarbet Branch)</h3>
+              <p class="gallery-caption-desc" data-i18n="gallery_item_sarbet_1_desc">የጡብ ቅስቶች፣ የተፈጥሮ ዛፍና የተረጋጋ ድባብ</p>
+            </div>
             <div class="gallery-overlay">
-              <div class="gallery-zoom-icon">🔍</div>
+              <div class="gallery-zoom-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </div>
             </div>
           </div>
 
-          <!-- Gallery Item 3 - Bole Dining Hall with Guests -->
-          <div class="gallery-item reveal-fade" data-gallery-cat="bole" data-zoomable data-full-img="assets/images/branch-bole-dining-hall-guests.jpg">
-            <img src="assets/images/branch-bole-dining-hall-guests.webp" alt="Delmela Bole Branch Seated Dining" loading="lazy" width="400" height="300">
+          <!-- Gallery Item 3 - Sarbet Branch (d3) -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="sarbet" data-zoomable data-full-img="assets/images/branch-sarbet-d3.jpg">
+            <span class="gallery-branch-badge" data-i18n="gallery_tab_sarbet">ሳርቤት ቅርንጫፍ</span>
+            <img src="assets/images/branch-sarbet-d3.webp" alt="Delmela Sarbet Branch Espresso Bar" loading="lazy" width="1280" height="1280">
+            <div class="gallery-caption-bar">
+              <h3 class="gallery-caption-title" data-i18n="gallery_item_sarbet_2_title">ሳርቤት ቅርንጫፍ (Sarbet Branch)</h3>
+              <p class="gallery-caption-desc" data-i18n="gallery_item_sarbet_2_desc">የኤስፕሬሶ ባር፣ ክፍት ምድጃና ምቹ የቡዝ መቀመጫዎች</p>
+            </div>
             <div class="gallery-overlay">
-              <div class="gallery-zoom-icon">🔍</div>
+              <div class="gallery-zoom-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </div>
             </div>
           </div>
 
-          <!-- Gallery Item 4 - Bole Evening Illuminated Sign -->
-          <div class="gallery-item reveal-fade" data-gallery-cat="bole" data-zoomable data-full-img="assets/images/branch-exterior-illuminated-delmela-night.jpg">
-            <img src="assets/images/branch-exterior-illuminated-delmela-night.webp" alt="Delmela Bole Night Sign Canopy" loading="lazy" width="400" height="300">
+          <!-- Gallery Item 4 - Sarbet Branch (d4) -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="sarbet" data-zoomable data-full-img="assets/images/branch-sarbet-d4.jpg">
+            <span class="gallery-branch-badge" data-i18n="gallery_tab_sarbet">ሳርቤት ቅርንጫፍ</span>
+            <img src="assets/images/branch-sarbet-d4.webp" alt="Delmela Sarbet Branch Shutter Wall & Exterior" loading="lazy" width="1280" height="1280">
+            <div class="gallery-caption-bar">
+              <h3 class="gallery-caption-title" data-i18n="gallery_item_sarbet_3_title">ሳርቤት ቅርንጫፍ (Sarbet Branch)</h3>
+              <p class="gallery-caption-desc" data-i18n="gallery_item_sarbet_3_desc">የቪንቴጅ ሻተር ግድግዳ፣ የውጭ ገጽታና የካፌ ከባቢ</p>
+            </div>
             <div class="gallery-overlay">
-              <div class="gallery-zoom-icon">🔍</div>
+              <div class="gallery-zoom-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </div>
             </div>
           </div>
 
-          <!-- Gallery Item 5 - Bole Main Hall with Staff -->
-          <div class="gallery-item reveal-fade" data-gallery-cat="bole" data-zoomable data-full-img="assets/images/branch-bole-main-hall-staff.jpg">
-            <img src="assets/images/branch-bole-main-hall-staff.webp" alt="Delmela Bole Main Hall Service" loading="lazy" width="400" height="300">
-            <div class="gallery-overlay">
-              <div class="gallery-zoom-icon">🔍</div>
+          <!-- Gallery Item 5 - Summit Branch (d1 - assigned from Bole) -->
+          <div class="gallery-item reveal-fade" data-gallery-cat="summit" data-zoomable data-full-img="assets/images/branch-bole-d1.jpg">
+            <span class="gallery-branch-badge" data-i18n="gallery_tab_summit">ሰሚት ቅርንጫፍ</span>
+            <img src="assets/images/branch-bole-d1.webp" alt="Delmela Summit Branch Main Dining & Cafe" loading="lazy" width="1280" height="1280">
+            <div class="gallery-caption-bar">
+              <h3 class="gallery-caption-title" data-i18n="gallery_item_summit_1_title">ሰሚት ቅርንጫፍ (Summit Branch)</h3>
+              <p class="gallery-caption-desc" data-i18n="gallery_item_summit_1_desc">ማዕከላዊ የመመገቢያ አዳራሽ፣ የጡብ ቅስቶችና የቡና ባር</p>
             </div>
-          </div>
-
-          <!-- Gallery Item 6 - Bole Espresso Pastry Bar -->
-          <div class="gallery-item reveal-fade" data-gallery-cat="bole" data-zoomable data-full-img="assets/images/branch-bole-espresso-pastry-bar.jpg">
-            <img src="assets/images/branch-bole-espresso-pastry-bar.webp" alt="Delmela Bole Modern Pastry Display" loading="lazy" width="400" height="300">
             <div class="gallery-overlay">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-          </div>
-
-          <!-- Gallery Item 7 - Bole Dining View Counter -->
-          <div class="gallery-item reveal-fade" data-gallery-cat="bole" data-zoomable data-full-img="assets/images/branch-bole-dining-view-counter.jpg">
-            <img src="assets/images/branch-bole-dining-view-counter.webp" alt="Delmela Bole Dining View" loading="lazy" width="400" height="300">
-            <div class="gallery-overlay">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-          </div>
-
-          <!-- Gallery Item 8 - Bole Arched Mirrors & Wave Ceiling -->
-          <div class="gallery-item reveal-fade" data-gallery-cat="bole" data-zoomable data-full-img="assets/images/branch-bole-arched-mirrors-seating.jpg">
-            <img src="assets/images/branch-bole-arched-mirrors-seating.webp" alt="Delmela Bole Arched Mirrors" loading="lazy" width="400" height="300">
-            <div class="gallery-overlay">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-          </div>
-
-          <!-- Gallery Item 8b - Bole Wide Dining Perspective -->
-          <div class="gallery-item reveal-fade" data-gallery-cat="bole" data-zoomable data-full-img="assets/images/branch-bole-wide-dining-perspective.jpg">
-            <img src="assets/images/branch-bole-wide-dining-perspective.webp" alt="Delmela Bole Wide Dining Hall" loading="lazy" width="400" height="300">
-            <div class="gallery-overlay">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-          </div>
-
-          <!-- Gallery Item 9 - Sarbet Brick Oven & Green Banquette -->
-          <div class="gallery-item reveal-fade" data-gallery-cat="sarbet" data-zoomable data-full-img="assets/images/branch-sarbet-brick-oven-banquette.jpg">
-            <img src="assets/images/branch-sarbet-brick-oven-banquette.webp" alt="Delmela Sarbet Branch Brick Wall & Oven" loading="lazy" width="400" height="300">
-            <div class="gallery-overlay">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-          </div>
-
-          <!-- Gallery Item 10 - Sarbet Live Wood-Fired Pizza Oven -->
-          <div class="gallery-item reveal-fade" data-gallery-cat="sarbet" data-zoomable data-full-img="assets/images/branch-sarbet-pizza-oven-flames.jpg">
-            <img src="assets/images/branch-sarbet-pizza-oven-flames.webp" alt="Delmela Sarbet Pizza Oven Flames" loading="lazy" width="400" height="300">
-            <div class="gallery-overlay">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-          </div>
-
-          <!-- Gallery Item 11 - Sarbet Brick Arch Window View -->
-          <div class="gallery-item reveal-fade" data-gallery-cat="sarbet" data-zoomable data-full-img="assets/images/branch-sarbet-brick-arch-window.jpg">
-            <img src="assets/images/branch-sarbet-brick-arch-window.webp" alt="Delmela Sarbet Brick Arch Window" loading="lazy" width="400" height="300">
-            <div class="gallery-overlay">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-          </div>
-
-          <!-- Gallery Item 12 - Sarbet Rustic Brick Corner -->
-          <div class="gallery-item reveal-fade" data-gallery-cat="sarbet" data-zoomable data-full-img="assets/images/branch-sarbet-rustic-brick-corner.jpg">
-            <img src="assets/images/branch-sarbet-rustic-brick-corner.webp" alt="Delmela Sarbet Rustic Table Corner" loading="lazy" width="400" height="300">
-            <div class="gallery-overlay">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-          </div>
-
-          <!-- Gallery Item 13 - Sarbet Brick Hallway Banquette -->
-          <div class="gallery-item reveal-fade" data-gallery-cat="sarbet" data-zoomable data-full-img="assets/images/branch-sarbet-brick-hallway-banquette.jpg">
-            <img src="assets/images/branch-sarbet-brick-hallway-banquette.webp" alt="Delmela Sarbet Brick Hallway" loading="lazy" width="400" height="300">
-            <div class="gallery-overlay">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-          </div>
-
-          <!-- Gallery Item 14 - Sarbet Black Arched French Doors -->
-          <div class="gallery-item reveal-fade" data-gallery-cat="sarbet" data-zoomable data-full-img="assets/images/branch-sarbet-arched-french-doors.jpg">
-            <img src="assets/images/branch-sarbet-arched-french-doors.webp" alt="Delmela Sarbet Arched French Doors" loading="lazy" width="400" height="300">
-            <div class="gallery-overlay">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-          </div>
-
-          <!-- Gallery Item 15 - Summit Branch Distressed Wood Facade -->
-          <div class="gallery-item reveal-fade" data-gallery-cat="summit" data-zoomable data-full-img="assets/images/branch-summit-exterior-rustic-patio.jpg">
-            <img src="assets/images/branch-summit-exterior-rustic-patio.webp" alt="Delmela Summit Branch Rustic Sign" loading="lazy" width="400" height="300">
-            <div class="gallery-overlay">
-              <div class="gallery-zoom-icon">🔍</div>
-            </div>
-          </div>
-
-          <!-- Gallery Item 16 - Summit Glass Canopy Garden Terrace -->
-          <div class="gallery-item reveal-fade" data-gallery-cat="summit" data-zoomable data-full-img="assets/images/branch-summit-glass-canopy-terrace.jpg">
-            <img src="assets/images/branch-summit-glass-canopy-terrace.webp" alt="Delmela Summit Glass Canopy Terrace" loading="lazy" width="400" height="300">
-            <div class="gallery-overlay">
-              <div class="gallery-zoom-icon">🔍</div>
+              <div class="gallery-zoom-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+              </div>
             </div>
           </div>
         </div>
@@ -675,14 +613,17 @@
 
         <!-- Branch Selector Switcher -->
         <div class="branch-selector-bar reveal-fade" role="tablist" aria-label="Branch Selector">
-          <button type="button" class="branch-tab-btn active" data-branch="bole" role="tab" aria-selected="true" data-i18n="branch_tab_bole">
-            📍 ቦሌ (Bole)
+          <button type="button" class="branch-tab-btn active" data-branch="bole" role="tab" aria-selected="true">
+            <svg class="icon" style="width:15px;height:15px;" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+            <span data-i18n="branch_tab_bole">ቦሌ (Bole)</span>
           </button>
-          <button type="button" class="branch-tab-btn" data-branch="sarbet" role="tab" aria-selected="false" data-i18n="branch_tab_sarbet">
-            📍 ሳርቤት (Sarbet)
+          <button type="button" class="branch-tab-btn" data-branch="sarbet" role="tab" aria-selected="false">
+            <svg class="icon" style="width:15px;height:15px;" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+            <span data-i18n="branch_tab_sarbet">ሳርቤት (Sarbet)</span>
           </button>
-          <button type="button" class="branch-tab-btn" data-branch="summit" role="tab" aria-selected="false" data-i18n="branch_tab_summit">
-            📍 ሰሚት (Summit)
+          <button type="button" class="branch-tab-btn" data-branch="summit" role="tab" aria-selected="false">
+            <svg class="icon" style="width:15px;height:15px;" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+            <span data-i18n="branch_tab_summit">ሰሚት (Summit)</span>
           </button>
         </div>
 
@@ -702,7 +643,7 @@
                 </div>
               </div>
               <p id="branch-active-desc" style="margin-top: 10px; font-size: 14px; color: var(--text-muted);" data-i18n="branch_bole_desc">
-                የተፈጥሮ ዛፍ ያረፈበት ማዕከላዊ የመመገቢያ አዳራሽ፣ ሰፊ መስኮቶችና ምቹ ድባብ።
+                ውብ የእንጨት ፓኔል ውጫዊ ገጽታ፣ አረንጓዴ የአትክልት መናፈሻና ምቹ መቀመጫዎች።
               </p>
             </div>
 
@@ -714,7 +655,7 @@
                 </div>
                 <div>
                   <h3 data-i18n="hours_title">የስራ ሰዓት</h3>
-                  <p data-i18n="hours_val">ከሰኞ እስከ እሑድ፡ ከጠዋቱ 2:00 እስከ ማታ 4:00 (8:00 AM – 10:00 PM)</p>
+                  <p data-i18n="hours_val">ከሰኞ – እሑድ፡ ከጠዋቱ 2:00 – ማታ 4:00 (8:00 AM – 10:00 PM)</p>
                 </div>
               </div>
             </div>
@@ -731,10 +672,12 @@
               </div>
               <div class="phones-list">
                 <a id="branch-phone-1" href="tel:+251980635959" class="phone-chip">
-                  <span>📞</span> <span class="phone-text">+251 98 063 5959</span>
+                  <svg class="icon" style="width:14px;height:14px;color:var(--accent-amber);" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.02l-2.21 2.19z"/></svg>
+                  <span class="phone-text">+251 98 063 5959</span>
                 </a>
                 <a id="branch-phone-2" href="tel:+251935955598" class="phone-chip">
-                  <span>📞</span> <span class="phone-text">+251 93 595 5598</span>
+                  <svg class="icon" style="width:14px;height:14px;color:var(--accent-amber);" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24 11.36 11.36 0 003.58.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.24 1.02l-2.21 2.19z"/></svg>
+                  <span class="phone-text">+251 93 595 5598</span>
                 </a>
               </div>
             </div>
@@ -855,7 +798,10 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <h2>Delmela</h2>
+          <div class="footer-logo-row">
+            <img src="assets/images/delmela-logo.webp" alt="Delmela Restaurant & Café Logo" class="footer-logo-img" width="48" height="48">
+            <span class="footer-brand-title">Delmela</span>
+          </div>
           <p data-i18n="about_p1">ዴልሜላ ሬስቶራንትና ካፌ በአዲስ አበባ በቦሌ፣ በሳርቤት እና በሰሚት ቅርንጫፎች የሚገኝ ሲሆን፤ ለወዳጅ ዘመድ መገናኛ፣ ለሥራ እረፍትና ለምሳ እንዲሁም ለቁርስና እራት ምቹና ማራኪ ከባቢን የፈጠረ ስፍራ ነው።</p>
         </div>
 
